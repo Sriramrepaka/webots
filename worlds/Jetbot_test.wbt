@@ -1,0 +1,38 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/nvidia/jetbot/protos/JetBot.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.09420398064397559 -0.2879221943859453 0.9530091395211335 5.621795302227292
+  position -3.008704654983609 2.409390723745723 0.9380852254314391
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+Solid {
+  translation 0 0 0.1
+  children [
+    DEF Ball Shape {
+      appearance PBRAppearance {
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  boundingObject USE Ball
+  physics Physics {
+  }
+}
+JetBot {
+  translation 0.5 0 0
+}
